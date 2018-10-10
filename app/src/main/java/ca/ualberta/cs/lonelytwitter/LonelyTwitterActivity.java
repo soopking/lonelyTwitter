@@ -9,12 +9,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Date;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -52,7 +49,7 @@ public class LonelyTwitterActivity extends Activity {
 				try {
 					newTweet.setMessage(text);
 				} catch (TweetTooLongException e) {
-
+					e.printStackTrace();
 				}
 				tweets.add(newTweet);
 				adapter.notifyDataSetChanged();
@@ -89,9 +86,6 @@ public class LonelyTwitterActivity extends Activity {
 			Type typeListTweets = new TypeToken<ArrayList<ImportantTweet>>(){}.getType();
 			tweets = gson.fromJson(reader,typeListTweets);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
