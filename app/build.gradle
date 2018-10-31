@@ -1,8 +1,11 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 18
+<<<<<<< HEAD
     buildToolsVersion '27.0.3'
+=======
+    buildToolsVersion '25.0.0'
+>>>>>>> lab-intenttesting
 
     defaultConfig {
         applicationId "ca.ualberta.cs.lonelytwitter"
@@ -25,3 +28,9 @@ android {
     }
 }
 
+<<<<<<< HEAD
+=======
+dependencies {
+    compile 'com.google.code.gson:gson:2.7'
+}
+>>>>>>> lab-intenttesting
