@@ -160,5 +160,6 @@ public class LonelyTwitterActivity extends Activity {
 			// TODO Auto-generated catch block
 			throw new RuntimeException();
 		}
+		bodyText.setText("");
 	}
 }
